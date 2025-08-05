@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tab Grouper Options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <h1>AI Tab Grouper Options</h1>
+    <form id="options-form">
+        <div class="form-group">
+            <label for="api-key">OpenAI API Key:</label>
+            <input type="password" id="api-key" name="api-key" placeholder="Enter your OpenAI API key">
+            <small>Your API key is stored locally and never shared. Get one at <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Platform</a></small>
+            <small class="privacy-notice">📋 Tab titles and URLs are sent to OpenAI for grouping analysis but are not stored by us.</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="enable-grouping">
+                <input type="checkbox" id="enable-grouping" name="enable-grouping">
+                Enable automatic grouping
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="grouping-threshold">Grouping Threshold:</label>
+            <input type="number" id="grouping-threshold" name="grouping-threshold" min="1" max="10" value="7">
+        </div>
+        
+        <div class="form-group">
+            <label for="show-debug-console">
+                <input type="checkbox" id="show-debug-console" name="show-debug-console" checked>
+                Show debug console in popup
+            </label>
+        </div>
+        
+        <button type="submit">Save Options</button>
+    </form>
+</body>
+</html>

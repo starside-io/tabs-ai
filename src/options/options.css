@@ -1,0 +1,114 @@
+:root {
+    --mars-red: #CD5C5C;
+    --mars-orange: #FF6B35;
+    --mars-dark: #1A0B0B;
+    --mars-gray: #2D1B1B;
+    --mars-light: #4A2C2C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111827; /* bg-gray-900 */
+    color: white;
+    margin: 0;
+    padding: 20px;
+    max-width: 600px;
+    min-height: 100vh;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    background: var(--mars-dark);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: white;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+    border: 1px solid var(--mars-gray);
+    border-radius: 6px;
+    box-sizing: border-box;
+    background: var(--mars-gray);
+    color: white;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--mars-orange);
+    box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+small {
+    color: #ccc;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+small a {
+    color: var(--mars-orange);
+    text-decoration: none;
+}
+
+small a:hover {
+    text-decoration: underline;
+    color: var(--mars-red);
+}
+
+.privacy-notice {
+    background: rgba(255, 107, 53, 0.1);
+    border-left: 3px solid var(--mars-orange);
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 0 4px 4px 0;
+    color: #e6e6e6;
+    font-size: 11px;
+}
+
+button {
+    background: linear-gradient(135deg, var(--mars-red), var(--mars-orange));
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, var(--mars-orange), var(--mars-red));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

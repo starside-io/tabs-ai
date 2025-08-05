@@ -1,0 +1,42 @@
+{
+  "name": "ai-tab-grouper-extension",
+  "version": "1.0.0",
+  "description": "A browser extension that uses AI to automatically group tabs by subject.",
+  "main": "src/background/background.ts",
+  "scripts": {
+    "build": "npm run build:chrome && npm run build:firefox",
+    "build:chrome": "webpack --mode production --env browser=chrome",
+    "build:firefox": "webpack --mode production --env browser=firefox",
+    "dev": "npm run dev:chrome && npm run dev:firefox",
+    "dev:chrome": "webpack --mode development --env browser=chrome",
+    "dev:firefox": "webpack --mode development --env browser=firefox",
+    "watch": "npm run watch:chrome",
+    "watch:chrome": "webpack --watch --env browser=chrome",
+    "watch:firefox": "webpack --watch --env browser=firefox",
+    "clean": "rm -rf dist dist-firefox"
+  },
+  "keywords": [
+    "browser-extension",
+    "tabs",
+    "ai",
+    "grouping"
+  ],
+  "author": "Burlet Mederic <mederic.burlet@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.329",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.3.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.1"
+  }
+}
