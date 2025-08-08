@@ -33,7 +33,7 @@ async function loadOptionsToForm() {
         // Populate form
         enableGroupingCheckbox.checked = options.enableGrouping || false;
         groupingThresholdInput.value = (options.groupingThreshold || 7).toString();
-        showDebugConsoleCheckbox.checked = options.showDebugConsole !== false; // Default to true
+        showDebugConsoleCheckbox.checked = options.showDebugConsole || false; // Default to false
         apiKeyInput.value = apiKey || '';
         
         console.log('Form populated with values:', {

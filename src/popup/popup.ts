@@ -31,7 +31,7 @@ console.log('=== POPUP SCRIPT INITIALIZED ===');
 
 // Create a logging system that displays in the popup
 let logContainer: HTMLDivElement;
-let debugConsoleEnabled = true; // Default to enabled
+let debugConsoleEnabled = false; // Default to disabled
 
 function addLogToPopup(message: string, isError: boolean = false) {
     // Only show debug logs if enabled
@@ -466,7 +466,7 @@ async function loadDebugConsoleSetting() {
     try {
         const settings = await storageService.getSettings();
         const options = settings.options || {};
-        debugConsoleEnabled = options.showDebugConsole !== false; // Default to true if not set
+        debugConsoleEnabled = options.showDebugConsole || false; // Default to false if not set
         
         // If debug console is disabled and container exists, hide it
         if (!debugConsoleEnabled && logContainer) {
@@ -476,8 +476,8 @@ async function loadDebugConsoleSetting() {
         addLogToPopup(`Debug console setting loaded: ${debugConsoleEnabled ? 'enabled' : 'disabled'}`);
     } catch (error) {
         console.error('Error loading debug console setting:', error);
-        // Default to enabled on error
-        debugConsoleEnabled = true;
+        // Default to disabled on error
+        debugConsoleEnabled = false;
     }
 }
 

@@ -40,7 +40,8 @@ module.exports = (env) => {
             new CopyWebpackPlugin({
                 patterns: [
                     { from: 'src/popup/popup.css', to: 'popup.css' },
-                    { from: 'src/options/options.css', to: 'options.css' }
+                    { from: 'src/options/options.css', to: 'options.css' },
+                    { from: 'icons/', to: 'icons/' }
                 ]
             }),
             new HtmlWebpackPlugin({

@@ -10,6 +10,10 @@
 **Problem:** The extension was trying to use a placeholder API service instead of OpenAI.
 **Solution:** Implemented proper OpenAI API integration with API key management.
 
+### 3. Missing Icon Files
+**Problem:** Extension icons weren't being copied to the distribution directory during build.
+**Solution:** Added the `icons/` folder to the CopyWebpackPlugin patterns in webpack.config.js.
+
 ## How to Test
 
 ### 1. Load the Extension
