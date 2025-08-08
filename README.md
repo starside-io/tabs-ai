@@ -11,6 +11,9 @@ The AI Tab Grouper Extension is a browser extension designed to enhance your bro
 - **User-Friendly Popup Interface**: Easily access and manage your tab groups through a simple popup interface.
 - **Customizable Options**: Configure settings to tailor the extension's behavior to your preferences.
 
+## Download
+🦊 **Firefox**: [Download from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/ai-tab-grouper/)
+
 ## Installation
 1. Clone the repository:
    ```
